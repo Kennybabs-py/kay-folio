@@ -1,0 +1,49 @@
+@import "../../styles/index.scss";
+.header {
+  @include showBorder();
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 5;
+
+  @include respondMax(mobile) {
+    width: 90vw;
+    left: 5%;
+  }
+
+  &_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+}
+
+.logo_name {
+  text-decoration: none;
+  font-family: "Ginger";
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.contact_nav {
+  text-decoration: none;
+  font-family: "Ginger";
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

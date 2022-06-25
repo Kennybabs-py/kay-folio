@@ -1,0 +1,43 @@
+@import "../../styles/index.scss";
+
+.links {
+  @include showBorder();
+  @include flex($flow: column wrap, $justify: space-around);
+  position: fixed;
+  bottom: 30vh;
+  right: 00px;
+  width: 50px;
+  height: 120px;
+  padding: 5px;
+  visibility: hidden;
+  z-index: 4;
+
+  a {
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.message {
+  @include showBorder();
+  @include flex($flow: column wrap, $justify: space-around);
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: max-content;
+  height: 50px;
+  padding: 5px;
+  visibility: hidden;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  color: black;
+}

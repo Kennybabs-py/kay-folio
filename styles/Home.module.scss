@@ -1,0 +1,189 @@
+@import "./index.scss";
+
+//CONTACT PAGE
+.contact {
+  width: 100vw;
+  @include showBorder();
+  box-sizing: border-box;
+}
+
+.home_link {
+  //   @include showBorder();
+  width: 30%;
+  margin: 70px 0 0 30px;
+  visibility: hidden;
+
+  button {
+    border: 1px solid black;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    outline: none;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    font-size: 90%;
+    font-family: "Ginger";
+    background-color: inherit;
+    @include flex($justify: space-around);
+    cursor: pointer;
+  }
+}
+
+.contact_text {
+  @include showBorder();
+  width: 30%;
+  // height: 40px;
+  margin: 20px auto 0;
+  visibility: hidden;
+
+  span {
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    font-family: "Ginger";
+  }
+
+  @include respondMax(tablet) {
+    width: 60%;
+  }
+
+  @include respondMax(mobile) {
+    width: 70%;
+    span {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.contact_form {
+  @include showBorder();
+  width: 35%;
+  margin: 10px auto 0;
+  box-sizing: border-box;
+  visibility: hidden;
+
+  @include respondMax(tablet) {
+    width: 80%;
+  }
+
+  @include respondMax(mobile) {
+    width: 80%;
+  }
+
+  input {
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+    height: 40px;
+    padding: 5px;
+    outline: none;
+    font-family: "Times New Roman", Times, serif;
+  }
+  textarea {
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+    padding: 5px;
+    outline: none;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .error_message {
+    // @include showBorder();
+    width: 50%;
+    display: block;
+    color: red;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .message_success {
+    @include showBorder();
+    width: 200px;
+    display: block;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  button {
+    border: 1px solid black;
+    display: block;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    outline: none;
+    width: 30%;
+    height: max-content;
+    padding: 10px;
+    margin: 10px auto;
+    font-weight: 600;
+    font-size: 90%;
+    font-family: "Ginger";
+    background-color: inherit;
+    cursor: pointer;
+  }
+}
+
+.links {
+  @include showBorder();
+  @include flex($flow: column wrap, $justify: space-around);
+  width: 40%;
+  height: 120px;
+  padding: 5px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  visibility: hidden;
+
+  @include respondMax(tablet) {
+    width: 70%;
+  }
+
+  span {
+    @include showBorder();
+    width: max-content;
+    text-align: center;
+    padding: 5px;
+    font-weight: 500;
+    font-size: 0.9em;
+    font-family: "Ginger";
+    @include flex($flow: column wrap, $justify: space-around);
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: "Ginger";
+      visibility: hidden;
+      transition: all 0.8s ease-in-out;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .icon {
+    width: 50%;
+    @include flex($justify: space-around);
+
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: black;
+      visibility: hidden;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
