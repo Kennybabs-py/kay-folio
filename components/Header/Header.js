@@ -16,7 +16,7 @@ const Header = () => {
           <span className={styles.logo_name}>Kay</span>
         </Link>
 
-        <Link href="/pages/contact">
+        <Link href="/pages/Contact/Contact">
           <span className={styles.contact_nav}>Contact me</span>
         </Link>
       </nav>

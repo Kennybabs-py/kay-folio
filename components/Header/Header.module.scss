@@ -1,9 +1,11 @@
-@import "../../styles/index.scss";
+@import "../../styles/config/index.scss";
 .header {
   @include showBorder();
   position: fixed;
-  width: 100%;
-  top: 0px;
+  width: 90%;
+  left: 5%;
+  top: 5px;
+  border-radius: 5px;
   z-index: 5;
 
   @include respondMax(mobile) {

@@ -1,4 +1,4 @@
-@import "../../styles/index.scss";
+@import "../../../styles/config/index.scss";
 
 .main {
   // border: 1px solid black;
@@ -9,13 +9,14 @@
 
 .hr {
   width: 90%;
-  height: 1px;
-  margin: 5px auto;
+  height: 2px;
+  margin: 20px auto;
   background-color: black;
+  visibility: hidden;
 }
 
 .intro {
-  @include showBorder();
+  // @include showBorder();
   margin: 1em auto 0;
   width: 100%;
   height: 150px;
@@ -36,7 +37,7 @@
   }
 
   &_text {
-    @include showBorder();
+    // @include showBorder();
     position: absolute;
     width: 80%;
     margin: 0 auto;
@@ -74,10 +75,13 @@
 }
 
 .about {
-  @include showBorder();
+  // @include showBorder();
   margin: 1.5em auto 0;
-  width: 80%;
+  width: 90%;
+  padding: 10px;
   @include flex($justify: space-around, $flow: column wrap);
+  box-sizing: border-box;
+  visibility: hidden;
 
   @include respondMax(tablet) {
     margin: 2em auto 0;
@@ -87,6 +91,7 @@
   @include respondMax(mobile) {
     margin: 2em auto 0;
     width: 90%;
+    visibility: hidden;
   }
 
   &_text {
@@ -94,24 +99,7 @@
     text-align: center;
     font-family: "Great Vibes Display";
 
-    span {
-      @include showBorder();
-      display: inline-block;
-      padding: 5px;
-      transition: all 0.5s ease-in-out;
-      cursor: pointer;
-      box-sizing: border-box;
-      font-family: "Ginger";
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
     @include respondMax(tablet) {
-      font-size: 1.5em;
-    }
-
-    @include respondMax(mobile) {
       font-size: 1.5em;
     }
   }
@@ -132,13 +120,16 @@
 }
 
 .skills {
-  @include showBorder();
+  // @include showBorder();
   margin: 2em auto 0;
   width: 80%;
   @include flex($justify: space-around, $flow: column wrap);
+  overflow: hidden;
+  visibility: hidden;
 
   @include respondMax(mobile) {
     width: 90%;
+    // visibility: visbible;
   }
 
   &_header {
@@ -162,6 +153,8 @@
 
   &_text {
     @include showBorder();
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
     margin: 1em auto;
     width: 80%;
     padding: 5px;
@@ -190,10 +183,12 @@
       font-size: 0.8em;
       font-family: "Great Vibes Display";
       cursor: pointer;
+      visibility: hidden;
 
       @include respondMax(mobile) {
         width: 100px;
         margin: 5px;
+        visibility: visible;
       }
     }
   }
@@ -214,9 +209,11 @@
     text-transform: uppercase;
     font-size: 1.5em;
     font-family: "Ginger";
+    visibility: hidden;
 
     @include respondMax(mobile) {
       width: 150px;
+      visibility: visible;
     }
   }
 
@@ -241,10 +238,12 @@
       transition: all 0.5s ease-in-out;
       cursor: pointer;
       box-sizing: border-box;
+      visibility: hidden;
 
       @include respondMax(mobile) {
         width: 250px;
         height: 200px;
+        visibility: visible;
       }
 
       span:first-of-type {

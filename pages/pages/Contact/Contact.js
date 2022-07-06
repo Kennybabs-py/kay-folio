@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { gsap } from "gsap";
-import Header from "../../components/Header/Header";
+import Header from "../../../components/Header/Header";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 
-import styles from "../../styles/Home.module.scss";
+import styles from "./Contact.module.scss";
 
 const Contact = () => {
   const [formValues, setFormValues] = useState({

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import styles from "./Footer.module.scss";
 import { gsap } from "gsap";
 import Link from "next/link";
-
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
@@ -11,13 +10,17 @@ import { AiFillMessage } from "react-icons/ai";
 const Footer = () => {
   useEffect(() => {
     const tl = gsap.timeline({ opacity: 0 });
-    tl.from("#links", {
-      y: -100,
-      delay: 3,
-      scale: 0,
-      autoAlpha: 0,
-      ease: "bounce",
-    })
+    tl.from(
+      "#links",
+      {
+        y: -100,
+        delay: 3,
+        scale: 0,
+        autoAlpha: 0,
+        ease: "bounce",
+      },
+      6
+    )
       .from("#message", {
         y: 100,
         delay: 1,
@@ -45,9 +48,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.links} id="links">
-        {" "}
         <a href="http://twitter.com/thisKehinde">
-          {" "}
           <AiOutlineTwitter className={styles.icon} />
         </a>
         <a href="https://github.com/Kennybabs-py">
@@ -59,7 +60,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.message} id="message">
-        <Link href="/pages/contact">
+        <Link href="/pages/Contact/Contact">
           <AiFillMessage className={styles.icon} />
         </Link>
       </div>
