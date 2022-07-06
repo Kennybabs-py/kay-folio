@@ -18,13 +18,12 @@ const Main = () => {
   useEffect(() => {
     ScrollTrigger.saveStyles("#project_header");
     ScrollTrigger.matchMedia({
-      "(min-width: 300px)": () => {
+      "(max-width: 600px)": () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: "#project_header",
             start: "top 90%",
             end: "bottom 20px",
-            markers: true,
             toggleActions: "play none none none",
           },
         });
@@ -43,13 +42,12 @@ const Main = () => {
   useEffect(() => {
     ScrollTrigger.saveStyles("#each_project");
     ScrollTrigger.matchMedia({
-      "(min-width: 300px)": () => {
+      "(max-width: 600px)": () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: "#each_project",
             start: "top 90%",
             end: "bottom 20px",
-            markers: true,
             toggleActions: "play none none none",
           },
         });
@@ -73,72 +71,15 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
-    ScrollTrigger.saveStyles("#skills");
-    ScrollTrigger.matchMedia({
-      "(max-width: 700px)": () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#skills",
-            start: "top 90%",
-            end: "bottom 20px",
-            markers: true,
-            toggleActions: "play none none reverse",
-          },
-        });
-        tl.fromTo(
-          "#skills",
-          {
-            autoAlpha: 0,
-            y: 70,
-          },
-          { autoAlpha: 1, y: 0 }
-        );
-      },
-    });
-  }, []);
-
-  useEffect(() => {
-    ScrollTrigger.saveStyles("#skill");
-    ScrollTrigger.matchMedia({
-      "(max-width: 700px)": () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#skill",
-            start: "top 90%",
-            end: "bottom 20px",
-            markers: true,
-            toggleActions: "play none none reverse",
-          },
-        });
-        tl.fromTo(
-          "#skill",
-          {
-            autoAlpha: 0,
-            x: 70,
-          },
-          {
-            autoAlpha: 1,
-            x: 0,
-            stagger: {
-              each: 0.1,
-              from: "start",
-            },
-          }
-        );
-      },
-    });
-  }, []);
-
-  useEffect(() => {
     ScrollTrigger.saveStyles(hr3.current);
     ScrollTrigger.matchMedia({
-      "(max-width: 900px)": () => {
+      "(max-width: 600px)": () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: hr3.current,
             start: "top 95%",
             end: "bottom 20px",
-            markers: true,
+
             toggleActions: "play none none reverse",
           },
         });
@@ -151,6 +92,7 @@ const Main = () => {
           {
             autoAlpha: 1,
             x: 0,
+            ease: "bounce",
           }
         );
       },
