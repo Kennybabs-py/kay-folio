@@ -1,12 +1,14 @@
 @import "../../styles/config/index.scss";
 .header {
   @include showBorder();
+  border-color: lighten($primary-color, 70%);
   position: fixed;
-  width: 90%;
-  left: 5%;
-  top: 5px;
-  border-radius: 5px;
+  width: 100%;
+  top: 0px;
+  border-radius: 10px;
   z-index: 5;
+  @include theme($dark-theme: true);
+  background-blend-mode: overlay;
 
   @include respondMax(mobile) {
     width: 90vw;
@@ -14,9 +16,10 @@
   }
 
   &_nav {
+    // @include showBorder();
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 60px;
     width: 90%;
     margin: auto;
@@ -28,7 +31,7 @@
   text-decoration: none;
   font-family: "Ginger";
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 

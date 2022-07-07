@@ -11,8 +11,10 @@
   padding: 5px;
   visibility: hidden;
   z-index: 4;
+  border-color: lighten($primary-color, 70%);
 
   a {
+    @include theme($dark-theme: true);
     display: block;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
@@ -41,4 +43,5 @@
   width: 30px;
   height: 30px;
   color: black;
+  @include theme($dark-theme: true);
 }

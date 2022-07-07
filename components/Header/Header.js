@@ -13,7 +13,7 @@ const Header = () => {
       </Head>
       <nav className={styles.header_nav}>
         <Link href="/">
-          <span className={styles.logo_name}>Kay</span>
+          <span className={styles.logo_name}>kay.build</span>
         </Link>
 
         <Link href="/pages/Contact/Contact">
