@@ -170,20 +170,33 @@ const Contact = () => {
       <div className={styles.links} id="links">
         <span>
           <MdOutlineAlternateEmail />
-          <a href="mailto:babalolakehinde74@gmail.com" target="_blank">
+          <a
+            href="mailto:babalolakehinde74@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             babalolakehinde74@gmail.com
           </a>
         </span>
         <div className={styles.icon}>
-          <a href="https://twitter.com/thisKehinde" target="_blank">
+          <a
+            href="https://twitter.com/thisKehinde"
+            target="_blank"
+            rel="noreferrer"
+          >
             <AiOutlineTwitter />
           </a>
-          <a href="https://github.com/Kennybabs-py" target="_blank">
+          <a
+            href="https://github.com/Kennybabs-py"
+            target="_blank"
+            rel="noreferrer"
+          >
             <AiOutlineGithub />
           </a>
           <a
             href="https://www.linkedin.com/in/kehinde-babalola/"
             target="_blank"
+            rel="noreferrer"
           >
             <AiOutlineLinkedin />
           </a>

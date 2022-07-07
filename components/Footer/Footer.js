@@ -48,13 +48,25 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.links} id="links">
-        <a href="http://twitter.com/thisKehinde">
+        <a
+          href="http://twitter.com/thisKehinde"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiOutlineTwitter className={styles.icon} />
         </a>
-        <a href="https://github.com/Kennybabs-py">
+        <a
+          href="https://github.com/Kennybabs-py"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiOutlineGithub className={styles.icon} />
         </a>
-        <a href="https://www.linkedin.com/in/kehinde-babalola-691577148/">
+        <a
+          href="https://www.linkedin.com/in/kehinde-babalola-691577148/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiOutlineLinkedin className={styles.icon} />
         </a>
       </div>

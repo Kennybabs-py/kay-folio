@@ -212,8 +212,8 @@ const Main = () => {
 
       <div className={styles.about} id="about">
         <div className={styles.about_text} id="text">
-          Hi, I'm Kehinde Babalola. I'm a Frontend Developer using modern tools
-          to build responsive and interactive web applications.
+          Hi, I&apos;m Kehinde Babalola. I&apos;m a Frontend Developer using
+          modern tools to build responsive and interactive web applications.
         </div>
         <button className={styles.button} id="button">
           Download Resume
@@ -223,7 +223,7 @@ const Main = () => {
       <hr className={styles.hr} id="hr" />
 
       <div className={styles.skills} id="skills">
-        <div className={styles.skills_header}>tools i'm euipped with</div>
+        <div className={styles.skills_header}>tools I&apos;m euipped with</div>
         <div className={styles.skills_text}>
           <div id="skill">html5</div>
 
