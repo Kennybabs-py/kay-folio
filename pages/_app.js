@@ -5,6 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(CSSPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
+// import Header from "components/Header/Header";
+// import Footer from "components/Footer/Footer";
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }

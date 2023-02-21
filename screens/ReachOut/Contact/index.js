@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import Link from "next/link";
-import { gsap } from "gsap";
-import Header from "../../../components/Header/Header";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { MdOutlineAlternateEmail } from "react-icons/md";
+import { gsap } from "gsap";
 
+// import Header from "components/Header";
 import styles from "./Contact.module.scss";
 
-const Contact = () => {
+export default function Contact() {
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -61,7 +60,6 @@ const Contact = () => {
   };
 
   //useeffect for gsap
-
   useEffect(() => {
     const tl = gsap.timeline({
       defaults: { opacity: 0 },
@@ -105,13 +103,6 @@ const Contact = () => {
 
   return (
     <div className={styles.contact}>
-      <Head>
-        <title>portfolio</title>
-        <meta name="description" content="Contact page" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
-
       <div className={styles.home_link} id="homelink">
         <Link href="/">
           <button> &larr; Back to home</button>
@@ -204,6 +195,4 @@ const Contact = () => {
       </div>
     </div>
   );
-};
-
-export default Contact;
+}

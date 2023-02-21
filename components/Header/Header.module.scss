@@ -1,13 +1,12 @@
 @import "../../styles/config/index.scss";
 .header {
-  @include showBorder();
-  border-color: lighten($primary-color, 70%);
+  // @include showBorder();
+
   position: fixed;
   width: 100%;
-  top: 0px;
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 5;
-  @include theme($dark-theme: true);
+  // @include theme($dark-theme: true);
   background-blend-mode: overlay;
 
   @include respondMax(mobile) {
@@ -19,7 +18,7 @@
     // @include showBorder();
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 60px;
     width: 90%;
     margin: auto;
@@ -33,11 +32,6 @@
   font-weight: 600;
   font-size: 20px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
-
-  &:hover {
-    transform: scale(1.2);
-  }
 }
 
 .contact_nav {
@@ -46,9 +40,4 @@
   font-weight: 600;
   font-size: 20px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
-
-  &:hover {
-    transform: scale(1.2);
-  }
 }

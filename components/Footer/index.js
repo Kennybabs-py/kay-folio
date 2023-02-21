@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./Footer.module.scss";
+import styles from "./footer.module.scss";
 import { gsap } from "gsap";
 import Link from "next/link";
 import { AiOutlineTwitter } from "react-icons/ai";
@@ -7,7 +7,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { AiFillMessage } from "react-icons/ai";
 
-const Footer = () => {
+export default function Footer() {
   useEffect(() => {
     const tl = gsap.timeline({ opacity: 0 });
     tl.from(
@@ -78,6 +78,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
